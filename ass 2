@@ -1,0 +1,30 @@
+#1
+def rev(s, i):
+  if i == 0:
+    return ""
+  else:
+    rev_s = s[::-1]
+    new_s = rev_s * i
+  return new_s
+
+print(rev("hello",2))
+
+#2
+def arranging(s):
+  u = ""
+  l = ""
+  for char in s:
+    if char.isupper():
+      u += char
+    else:
+      l += char
+  return u + l
+
+
+print(arranging("HelloWorld"))
+
+#3
+def test(s1, s2):
+  return sorted(s1) == sorted(s2)
+
+print(test("hello","ohlel"))
