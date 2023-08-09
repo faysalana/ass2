@@ -38,7 +38,7 @@ def h_l(list):
     lv = list[0]
     li = 0
     i = 1
-    while i < len(lst): # I 1st wanted to use the for loop like I used to do in Java and use array[i] 
+    while i < len(list): # I 1st wanted to use the for loop like I used to do in Java and use array[i] 
                         # to check index then I used list and while
       if list[i] > hv:
           hv = list[i]
