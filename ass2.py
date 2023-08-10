@@ -132,15 +132,17 @@ def pos_system():
                     # I had to google it because I tried using if barcode != "12345" ... and it made problems when I
                     # wanted to input 0 to show the receipt or restart
                     print("Invalid input. Please enter a valid number.")
-
+                    continue
                 barcode = int(barcode)
                 if barcode == 0:
                     break
-
+                if barcode not in items:
+                    print("Invalid barcode. Item not found!")  # Provide immediate feedback
+                    continue
                 quantity = input("Enter the quantity purchased: ")
                 if not quantity.isdigit():
                     print("Invalid input. Please enter a valid number.")
-
+                    continue
                 quantity = int(quantity)
                 item = add_item(items, barcode, quantity)  # Here it will calculate
                 if item:
