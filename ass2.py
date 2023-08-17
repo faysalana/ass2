@@ -1,4 +1,4 @@
-#1 mewww
+#1
 def rev(s, i):
   if i == 0:
     return ""
